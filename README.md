@@ -30,11 +30,21 @@ If do not have installed it.please download and install from:http://opencv.org/
 <hr>
 ##Example
 
-**Using the camerashow demo to show the camera and capture both the gray and color images.**
+Using the camerashow demo to show the camera and capture both the gray and color images.
 * $ ./camerashow
 
-**Using the equalizehistgram demo to equalizehist the input image name "lena.bmp" and save as "output.bmp" while showing the source image and result image on the window.**
+Using the equalizehistgram demo to equalizehist the input image name "lena.bmp" and save as "output.bmp" while showing the source image and result image on the window.
 * $ ./equalizehistgram lena.bmp output.bmp
+
+##ScreenShot
+* **Using the edgedetect demo to analyse what kind of edge detect methods is suitable for the input images.**
+![alt tag](https://github.com/chenxilinsidney/AnalyseImageWithOpenCV/blob/master/EdgeDetectDemoScreenshot.png)
+* **Using the filter demo to analyse what kind of filter methods and arguments' value is suitable for the input images.**
+![alt tag](https://github.com/chenxilinsidney/AnalyseImageWithOpenCV/blob/master/FilterDemoScreenshot.png)
+* **Simple print the gray value of the point clicked by left mouse to the stdout.**
+![alt tag](https://github.com/chenxilinsidney/AnalyseImageWithOpenCV/blob/master/GrayValueShowDemoScreenshot.png)
+* **Using the threshold demo to anlayse kind of threshold methods and get the best threshold value while running the demo.**
+![alt tag](https://github.com/chenxilinsidney/AnalyseImageWithOpenCV/blob/master/ThresholdDemoScreenshot.png)
 
 <hr>
 ##Licensing
