@@ -84,6 +84,18 @@ int main(int argc, char* argv[])
     cout << "image height = " << src.rows << endl;
     cout << "image width = " << src.cols << endl;
     cout << "image channel = " << src.channels() << endl;
+    for (int j = 0; j <= src.cols; j++) {
+        printf("%3d|", j);
+    }
+    cout << endl;
+    for (int i = 0; i < src.rows; i++) {
+        printf("%3d|", i + 1);
+        uchar* p = src.ptr<uchar>(i);
+        for (int j = 0; j < src.cols; j++) {
+            printf("%3d|", p[j]);
+        }
+        cout << endl;
+    }
 
     /// Create a window to display the results
     namedWindow(window_name, WINDOW_AUTOSIZE);
