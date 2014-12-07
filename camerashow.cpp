@@ -91,6 +91,7 @@ int main(void)
 
     // start show the camera
     char key = -1;
+    int num = 1;
     for(;;) {
         Mat frame;
         cap.read(frame);
@@ -102,14 +103,21 @@ int main(void)
             break;
         }
         // capture image
+        char name_gray[] = "gray_01.bmp";
+        char name_color[] = "color_01.bmp";
+        name_gray[5] = num / 10 + 0x30;
+        name_color[6] = num / 10 + 0x30;
+        name_gray[6] = num % 10 + 0x30;
+        name_color[7] = num % 10 + 0x30;
         if(key == 'S' || key == 's') {
             capture_color_image = frame.clone();
             cvtColor(capture_color_image, capture_gray_image,
                     cv::COLOR_BGR2GRAY);
             imshow("color", capture_color_image);
             imshow("gray", capture_gray_image);
-            imwrite("color.bmp", capture_color_image);
-            imwrite("gray.bmp", capture_gray_image);
+            imwrite(name_color, capture_color_image);
+            imwrite(name_gray, capture_gray_image);
+            num++;
         }
     }
     cap.release();
